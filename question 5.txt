@@ -1,0 +1,41 @@
+# include <iostream>
+
+# include <vector>
+
+# include <string>
+
+std::string findLongestString(const std::vector<std::string>& strings) {
+
+    if (strings.empty()) {
+
+        return ""; // Return an empty string if the list is empty
+
+    }
+
+    std::string longest = strings[0]; // Initialize longest with the first string
+
+    for (size_t i = 1; i < strings.size(); ++i) {
+
+        if (strings[i].length() > longest.length()) {
+
+            longest = strings[i]; // Update longest if a longer string is found
+
+        }
+
+    }
+
+    return longest;
+
+}
+
+int main() {
+
+    std::vector<std::string> stringList = {"apple", "banana", "kiwi", "strawberry", "orange"};
+
+    std::string longestString = findLongestString(stringList);
+
+    std::cout << "Longest string: " << longestString << std::endl;
+
+    return 0;
+
+}
