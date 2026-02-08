@@ -1,0 +1,47 @@
+# include <iostream>
+
+# include <vector>
+
+# include <string>
+
+# include <algorithm>
+
+std::vector<std::string> sortStringsAlphabetically(const std::vector<std::string>& strings) {
+
+    std::vector<std::string> sortedStrings = strings;
+
+    std::sort(sortedStrings.begin(), sortedStrings.end());
+
+    return sortedStrings;
+
+}
+
+int main() {
+
+    std::vector<std::string> strings = {"banana", "apple", "cherry", "date"};
+
+    std::vector<std::string> sortedStrings = sortStringsAlphabetically(strings);
+
+    std::cout << "Original list: ";
+
+    for (const std::string& str : strings) {
+
+        std::cout << str << " ";
+
+    }
+
+    std::cout << std::endl;
+
+    std::cout << "Sorted list: ";
+
+    for (const std::string& str : sortedStrings) {
+
+        std::cout << str << " ";
+
+    }
+
+    std::cout << std::endl;
+
+    return 0;
+
+}
