@@ -1,0 +1,41 @@
+# include <iostream>
+
+# include <string>
+
+# include <algorithm>
+
+std::string removeVowels(const std::string& sentence) {
+
+    std::string result = "";
+
+    for (char c : sentence) {
+
+        char lowerC = std::tolower(c);
+
+        if (lowerC != 'a' && lowerC != 'e' && lowerC != 'i' && lowerC != 'o' && lowerC != 'u') {
+
+            result += c;
+
+        }
+
+    }
+
+    return result;
+
+}
+
+int main() {
+
+    std::string sentence;
+
+    std::cout << "Enter a sentence: ";
+
+    std::getline(std::cin, sentence);
+
+    std::string result = removeVowels(sentence);
+
+    std::cout << "Sentence with vowels removed: " << result << std::endl;
+
+    return 0;
+
+}
