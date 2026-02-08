@@ -1,0 +1,51 @@
+# include <iostream>
+
+# include <vector>
+
+std::vector<int> removeEvenNumbers(const std::vector<int>& inputList) {
+
+    std::vector<int> resultList;
+
+    for (int num : inputList) {
+
+        if (num % 2 != 0) {
+
+            resultList.push_back(num);
+
+        }
+
+    }
+
+    return resultList;
+
+}
+
+int main() {
+
+    std::vector<int> numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+    std::vector<int> oddNumbers = removeEvenNumbers(numbers);
+
+    std::cout << "Original list: ";
+
+    for (int num : numbers) {
+
+        std::cout << num << " ";
+
+    }
+
+    std::cout << std::endl;
+
+    std::cout << "List with even numbers removed: ";
+
+    for (int num : oddNumbers) {
+
+        std::cout << num << " ";
+
+    }
+
+    std::cout << std::endl;
+
+    return 0;
+
+}
