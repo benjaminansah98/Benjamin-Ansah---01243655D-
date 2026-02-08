@@ -1,0 +1,41 @@
+# include <iostream>
+
+# include <vector>
+
+# include <string>
+
+# include <algorithm>
+
+std::vector<std::string> reverseStrings(const std::vector<std::string>& strings) {
+
+    std::vector<std::string> reversedStrings;
+
+    for (const std::string& str : strings) {
+
+        std::string reversedStr = str;
+
+        std::reverse(reversedStr.begin(), reversedStr.end());
+
+        reversedStrings.push_back(reversedStr);
+
+    }
+
+    return reversedStrings;
+
+}
+
+int main() {
+
+    std::vector<std::string> strings = {"hello", "world", "C++"};
+
+    std::vector<std::string> reversed = reverseStrings(strings);
+
+    for (const std::string& str : reversed) {
+
+        std::cout << str << std::endl;
+
+    }
+
+    return 0;
+
+}
