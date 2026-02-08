@@ -1,0 +1,35 @@
+# include <iostream>
+
+# include <vector>
+
+double calculateAverage(const std::vector<int>& list) {
+
+    if (list.empty()) {
+
+        return 0.0; // Avoid division by zero for an empty list
+
+    }
+
+    double sum = 0.0;
+
+    for (int num : list) {
+
+        sum += num;
+
+    }
+
+    return sum / list.size();
+
+}
+
+int main() {
+
+    std::vector<int> numbers = {1, 2, 3, 4, 5};
+
+    double average = calculateAverage(numbers);
+
+    std::cout << "The average is: " << average << std::endl; // Output: 3
+
+    return 0;
+
+}
