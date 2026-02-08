@@ -1,0 +1,29 @@
+# include <iostream>
+
+# include <vector>
+
+int sumList(const std::vector<int>& list) {
+
+    int sum = 0;
+
+    for (int num : list) {
+
+        sum += num;
+
+    }
+
+    return sum;
+
+}
+
+int main() {
+
+    std::vector<int> numbers = {1, 2, 3, 4, 5};
+
+    int total = sumList(numbers);
+
+    std::cout << "Sum of the list: " << total << std::endl;
+
+    return 0;
+
+}
